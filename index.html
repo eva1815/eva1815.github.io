@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Eva Fan — Portfolio</title>
+  <meta name="description" content="Portfolio of Eva Fan — Software Engineering Technology student focused on Python, Flask, SQL, data analytics, and web development." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0f14; --panel:#0f141b; --card:#121822; --ink:#e9eef5; --muted:#9fb0c3; --brand:#4aa8ff; --accent:#74f1a3;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif}
+    a{color:var(--brand);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1040px;margin:0 auto;padding:24px}
+    header{position:sticky;top:0;z-index:20;background:rgba(11,15,20,.75);backdrop-filter:blur(6px);border-bottom:1px solid #1c2430}
+    nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.2px}
+    .brand-badge{width:32px;height:32px;border-radius:10px;background:linear-gradient(135deg,var(--brand),#7ab8ff);display:grid;place-items:center;color:#001a33;font-weight:800}
+    .menu a{margin-left:16px;color:var(--muted)}
+    .menu a:hover{color:var(--ink)}
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;padding:48px 0}
+    .hero h1{font-size:40px;line-height:1.15;margin:0 0 12px}
+    .hero p{color:var(--muted);font-size:18px;margin:0 0 16px}
+    .pillrow{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0}
+    .pill{padding:8px 12px;border:1px solid #223041;border-radius:999px;color:#d6e6fa;background:#0d1420}
+    .cta{display:flex;gap:12px;margin-top:18px}
+    .btn{padding:12px 16px;border-radius:12px;border:1px solid #223041;background:#172233;color:#eaf3ff;font-weight:600}
+    .btn.primary{background:linear-gradient(135deg,var(--brand),#7ab8ff);color:#001a33;border:none}
+    .btn:hover{filter:brightness(1.08)}
+    .cardgrid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
+    .card{grid-column:span 12;background:var(--card);border:1px solid #1c2430;border-radius:18px;padding:18px}
+    .card h3{margin:0 0 6px}
+    .badge{display:inline-block;padding:6px 10px;border-radius:999px;border:1px solid #223041;background:#0b1220;color:#cfe5ff;font-size:12px;margin-right:6px}
+    .row{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+    .two{grid-column:span 12}
+    @media(min-width:880px){
+      .two{grid-column:span 6}
+    }
+    footer{margin:48px 0 32px;color:var(--muted);text-align:center}
+    .section{padding:24px 0}
+    .kpis{display:flex;gap:16px;flex-wrap:wrap;margin-top:8px}
+    .kpi{padding:10px 14px;border:1px solid #1c2430;border-radius:12px;background:#0f141b;color:#d0e0f0}
+    .list{display:grid;gap:10px}
+    .list li{padding:10px 12px;border:1px solid #1c2430;border-radius:12px;background:#0f141b}
+    .muted{color:var(--muted)}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <nav>
+        <div class="brand"><div class="brand-badge">EF</div> Eva Fan</div>
+        <div class="menu">
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div>
+        <h1>Software Engineering Technology @ McMaster — building practical apps with Python, Flask, SQL & data.</h1>
+        <p>Recently built and deployed a <strong>Fitness & Nutrition Chatbot</strong> using Flask, scikit‑learn and Render. I enjoy turning ideas into working web apps and dashboards.</p>
+        <div class="pillrow" aria-label="skills">
+          <span class="pill">Python</span><span class="pill">Flask</span><span class="pill">SQL</span>
+          <span class="pill">JavaScript</span><span class="pill">Power BI</span><span class="pill">Tableau</span>
+        </div>
+        <div class="cta">
+          <a class="btn primary" href="https://fitness-bot-ketp.onrender.com" target="_blank" rel="noopener">Live Chatbot</a>
+          <a class="btn" href="https://github.com/eva1815/fitness-bot" target="_blank" rel="noopener">GitHub Repo</a>
+        </div>
+        <div class="kpis">
+          <div class="kpi">Open to Co‑op (2025)</div>
+          <div class="kpi">Hamilton / GTA, Canada</div>
+        </div>
+      </div>
+      <div>
+        <div class="card">
+          <h3 style="margin:0 0 8px">Quick Profile</h3>
+          <p class="muted" style="margin:0">McMaster University • Software Engineering Technology • Focus on web dev, data and IT solutions.</p>
+          <ul class="list" style="margin:14px 0 0">
+            <li>🔹 Python, Flask, REST APIs, Git/GitHub</li>
+            <li>🔹 SQL, data analysis, visualization</li>
+            <li>🔹 Front‑end: HTML, CSS, JS</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <h2 style="margin-bottom:12px">Projects</h2>
+      <div class="cardgrid">
+        <article class="card two">
+          <h3>🏋️‍♀️ Fitness & Nutrition Chatbot</h3>
+          <div class="muted">Flask • scikit‑learn • HTML/CSS/JS • Render</div>
+          <p>Web chatbot that answers fitness & nutrition questions via TF‑IDF semantic matching and a custom knowledge base; features a clean chat UI and cloud deployment.</p>
+          <p>
+            <a class="badge" href="https://fitness-bot-ketp.onrender.com" target="_blank" rel="noopener">Live Demo</a>
+            <a class="badge" href="https://github.com/eva1815/fitness-bot" target="_blank" rel="noopener">Source</a>
+          </p>
+        </article>
+
+        <article class="card two">
+          <h3>📊 Data Dashboard (Placeholder)</h3>
+          <div class="muted">Streamlit • Pandas • Plotly</div>
+          <p>Interactive dashboard exploring a public dataset (e.g., fitness, finance or weather) with filtering, sorting and charts. <em>(Coming soon)</em></p>
+          <p><span class="badge">In Progress</span></p>
+        </article>
+
+        <article class="card two">
+          <h3>🗂️ Task Manager / To‑Do App (Placeholder)</h3>
+          <div class="muted">Flask/Django • SQLite • CRUD</div>
+          <p>Full‑stack CRUD app with authentication, categories and due dates to demonstrate database skills and clean API design. <em>(Planned)</em></p>
+          <p><span class="badge">Planned</span></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <h2 style="margin-bottom:12px">Skills</h2>
+      <div class="cardgrid">
+        <div class="card two">
+          <h3>Core</h3>
+          <div class="row">
+            <span class="badge">Python</span><span class="badge">Flask</span><span class="badge">REST APIs</span>
+            <span class="badge">SQL</span><span class="badge">Git/GitHub</span><span class="badge">HTML/CSS/JS</span>
+          </div>
+        </div>
+        <div class="card two">
+          <h3>Data & Visualization</h3>
+          <div class="row">
+            <span class="badge">Pandas</span><span class="badge">NumPy</span><span class="badge">scikit‑learn</span>
+            <span class="badge">Tableau</span><span class="badge">Power BI</span><span class="badge">Plotly</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <h2 style="margin-bottom:12px">About</h2>
+      <div class="card">
+        <p>Hi, I’m <strong>Eva Fan</strong> — a Software Engineering Technology student at McMaster University. I enjoy building projects that connect Python, Flask, SQL and data analytics with real‑world problems. I’m currently seeking a co‑op where I can contribute to web apps, dashboards or IT solutions while learning from a collaborative team.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2 style="margin-bottom:12px">Contact</h2>
+      <div class="card">
+        <p>Best ways to reach me:</p>
+        <ul class="list">
+          <li>GitHub: <a href="https://github.com/eva1815" target="_blank" rel="noopener">github.com/eva1815</a></li>
+          <li>LinkedIn: <a href="https://www.linkedin.com/" target="_blank" rel="noopener">linkedin.com</a> (add your public URL)</li>
+          <li>Email: <em>add your email here</em></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="y"></span> Eva Fan • Built with HTML/CSS • Hosted free on GitHub Pages
+  </footer>
+
+  <script>
+    // year stamp
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
