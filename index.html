@@ -66,6 +66,38 @@
   transform: scale(1.03);
 }
 
+.screenshots{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
+  gap:12px;
+  margin-top:12px;
+}
+
+/* NEW: a uniform media frame */
+.screenshots .shot{
+  position:relative;
+  aspect-ratio:16/10;            /* match the right card height */
+  border:1px solid #1c2430;      /* same border color as cards */
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 6px 18px rgba(0,0,0,.12);
+  background:#0b1220;
+}
+
+/* make images fill the frame neatly */
+.screenshots .shot > img{
+  width:100%;
+  height:100%;
+  object-fit:cover;              /* crop to fit, keeps layout identical */
+  display:block;
+  transition: transform .2s ease;
+}
+
+.screenshots .shot > img:hover{
+  transform:scale(1.03);
+}
+
+
   </style>
 </head>
 <body>
@@ -126,9 +158,10 @@
             <a class="badge" href="https://github.com/eva1815/fitness-bot" target="_blank" rel="noopener">Source</a>
           </p>
           <div class="screenshots">
-    <img src="images/fitness/Bot1.png" alt="Screenshot Light Chatbot 1 ">
-    <img src="images/fitness/Bot2.png" alt="Screenshot Light Chatbot 2">
-    <img src="images/fitness/Bot3.png" alt="Screenshot Light Chatbot 3">
+     <div class="shot"><img src="images/fitness/Bot1.png" alt="Screenshot Light Chatbot 1" loading="lazy"></div>
+     <div class="shot"><img src="images/fitness/Bot2.png" alt="Screenshot Light Chatbot 2" loading="lazy"></div>
+     <div class="shot"><img src="images/fitness/Bot3.png" alt="Screenshot Light Chatbot 3">
+    loading="lazy"</div>
   </div>
         </article>
 
